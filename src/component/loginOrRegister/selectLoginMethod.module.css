@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.panel {
+  width: 335px;
+  height: 245px;
+  background: #ffffff;
+  border-radius: 15%;
+}
+.title {
+  font-family: "Inter-SemiBold";
+  text-align: center;
+  font-size: 22px;
+  margin: 20% 0 15% 0;
+}
+.btnBlock {
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    font-family: "Inter-Light";
+    font-weight: 700;
+    width: 30%;
+    height: 33px;
+    background-color: #000036;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 11px;
+  }
+  .login {
+    background-color: #ffffff;
+    border: 2px solid #000036;
+    color: #000036;
+  }
+  .login:hover {
+    border: none;
+    background-color: #000036;
+    color: #fff;
+
+    transition: all 0.5s;
+  }
+}

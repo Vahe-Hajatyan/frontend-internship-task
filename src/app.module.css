@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Inter-Light";
+  src: url("../public/font/Inter-Light.ttf");
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("../public/font/Inter-SemiBold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #000036;
+}
+.app {
+  background-image: linear-gradient(#cbcace, #a8daf8);
+  height: 100vh;
+}

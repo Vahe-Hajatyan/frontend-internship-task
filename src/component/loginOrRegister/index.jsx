@@ -1,3 +1,5 @@
-import { LoginOrRegister } from "./loginOrRegister.jsx";
+import { LoginOrRegister } from "./loginOrRegister";
+import { SelectLoginMethod } from "./selectLoginMethod";
+import { LogIn } from "./login/Login";
 
-export { LoginOrRegister };
+export { LoginOrRegister, LogIn, SelectLoginMethod };
