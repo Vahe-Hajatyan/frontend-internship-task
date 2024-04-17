@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "../login/login.module.css";
 import { useDispatch, useSelector } from "react-redux";
+import eye from "../../img/eye.png";
 export const LogIn = ({ setPage, title, footerText, action }) => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.auth.status);
@@ -46,6 +47,9 @@ export const LogIn = ({ setPage, title, footerText, action }) => {
   function submit() {
     if (validation.email && validation.pas) {
       dispatch(action({ email, pas }));
+      if (footerText[1] === "log in") {
+        localStorage.setItem(email, JSON.stringify({ email, pas }));
+      }
     }
   }
   return (
@@ -53,11 +57,10 @@ export const LogIn = ({ setPage, title, footerText, action }) => {
       <div className={style.panel}>
         <div className={style.title}>
           <h2>{title}</h2>
-          {/* <h2>Create an account</h2> */}
         </div>
         <div className={style.form}>
           <label>
-            please enter your email
+            enter your email
             <input
               className={!validation.email ? style.invalid : ""}
               value={email}
@@ -68,8 +71,8 @@ export const LogIn = ({ setPage, title, footerText, action }) => {
             {!validation.email && <p>email is incorrect</p>}
           </label>
           <label>
-            please enter your password
-            <img src="/img/eye.png" alt="eye" onClick={() => setEye(!isEye)} />
+            enter your password
+            <img src={eye} alt="eye" onClick={() => setEye(!isEye)} />
             <input
               className={!validation.pas ? style.invalid : ""}
               value={pas}

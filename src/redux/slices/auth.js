@@ -9,9 +9,12 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login(state, action) {
+      let data = localStorage.getItem(action.payload.email);
+      data = JSON.parse(data);
       if (
-        action.payload.email === "user@gmail.com" &&
-        action.payload.pas === "password"
+        data &&
+        data.email === action.payload.email &&
+        data.pas === action.payload.pas
       ) {
         state.data = action.payload;
         state.status = true;
@@ -24,7 +27,11 @@ const authSlice = createSlice({
       state.data = action.payload;
       state.status = "successful";
     },
+    logout(state) {
+      state.data = null;
+      state.status = "";
+    },
   },
 });
 export const authReducer = authSlice.reducer;
-export const { login , signup } = authSlice.actions;
+export const { login, signup, logout } = authSlice.actions;

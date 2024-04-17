@@ -13,7 +13,8 @@
   font-family: sans-serif;
   color: #000036;
 }
-.app {
+body {
   background-image: linear-gradient(#cbcace, #a8daf8);
-  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

@@ -1,18 +1,15 @@
 import { useSelector } from "react-redux";
-import { LoginOrRegister } from "./component/loginOrRegister/";
+import { LoginOrRegister } from "./page/loginOrRegister/loginOrRegister";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import style from "./app.module.css";
+import { Home } from "./page/Home/Home";
 function App() {
   const isAuth = useSelector((state) => state.auth.data);
-  console.log(isAuth);
   return (
     <div className={style.app}>
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={isAuth ? <div>hi</div> : <LoginOrRegister />}
-          />
+          <Route path="/" element={isAuth ? <Home /> : <LoginOrRegister />} />
         </Routes>
       </BrowserRouter>
     </div>

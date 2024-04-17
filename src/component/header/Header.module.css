@@ -1,0 +1,49 @@
+.headerBlock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff4a;
+  height: 60px;
+  .nav {
+    display: flex;
+    h2 {
+      margin-right: 5%;
+      cursor: pointer;
+    }
+  }
+}
+
+.logout {
+  font-family: "Inter-Light";
+  font-weight: 700;
+  width: 80px;
+  height: 33px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 11px;
+  background-color: #ffffff4a;
+  border: 2px solid #000036;
+  color: #000036;
+}
+.logout:hover {
+  border: none;
+  background-color: #000036;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 545px) {
+  .headerBlock {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .headerBlock {
+    font-size: 10px;
+  }
+  .logout {
+    width: 65px;
+    height: 25px;
+    font-size: 13px;
+  }
+}

@@ -83,3 +83,42 @@
   color: red;
   text-align: start;
 }
+@media screen and (max-width: 585px) {
+  .panel {
+    width: 417px;
+    height: 322px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .panel {
+    width: 322px;
+    height: 289px;
+  }
+  .title {
+    h2 {
+      font-size: 24px;
+    }
+  }
+  .form {
+    input {
+      height: 35px;
+    }
+    label {
+      font-size: 11px;
+      img {
+        top: 29px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .panel {
+    width: 310px;
+  }
+  .title {
+    h2 {
+      font-size: 22px;
+    }
+  }
+}

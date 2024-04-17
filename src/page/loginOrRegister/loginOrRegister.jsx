@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { LogIn, SelectLoginMethod } from "./";
+import { LogIn } from "../../component/login/Login";
+import { SelectLoginMethod } from "./selectLoginMethod";
 import { signup, login } from "../../redux/slices/auth";
 
 export const LoginOrRegister = () => {

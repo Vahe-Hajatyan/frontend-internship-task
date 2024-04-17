@@ -1,0 +1,42 @@
+.itemsBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item {
+  margin: 20px;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 331px;
+    margin-left: 25px;
+  }
+}
+.img {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 655px) {
+  .bigImg {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .bigImg {
+    width: 316px;
+  }
+  .item {
+    p {
+      width: 140px;
+    }
+  }
+}
